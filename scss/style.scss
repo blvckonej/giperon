@@ -1,0 +1,103 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
+@import "./reset.scss";
+@import "./colors.scss";
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.container {
+  width: 1120px;
+  margin: 0 auto;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 20px;
+  &__logo {
+    display: flex;
+    align-items: center;
+  }
+  &__logo-text {
+    margin-left: 18px;
+    font-weight: 600;
+    font-size: 32px;
+  }
+  &__buttons-btn {
+    width: 101px;
+    height: 36px;
+    background-color: $green;
+    margin-right: 24px;
+    color: $white;
+    font-weight: 700;
+    &:hover {
+      background-color: lighten($color: $green, $amount: 20);
+      transition: all ease-in-out 0.2s;
+    }
+    &:active {
+      background-color: darken($color: $green, $amount: 10);
+      transition: all ease-in-out 0.2s;
+    }
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+.subheader {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+  height: 950px;
+  background: url("../img/subheaderBack.png") no-repeat center;
+  background-size: cover;
+  position: relative;
+  z-index: -1;
+  &__block-left {
+    width: 360px;
+    height: 500px;
+    color: $white;
+    border-top: 6px solid #c5ff2e;
+    border-left: 6px solid #c5ff2e;
+    border-bottom: 6px solid #c5ff2e;
+    background: linear-gradient(#c5ff2e, #c5ff2e),
+      linear-gradient(#c5ff2e, #c5ff2e);
+    background-size: 6px 260px, 6px 40px;
+    background-repeat: no-repeat, no-repeat;
+    background-position: right bottom, top right;
+    z-index: 1;
+  }
+  &__block-text {
+    background-color: transparent;
+    display: block;
+    margin-top: 34px;
+    margin-left: 32px;
+    width: 633px;
+    height: 198px;
+    z-index: 60;
+    font-size: 54px;
+    font-weight: 600;
+    line-height: 66px;
+  }
+  &__block-descr {
+    margin: 16px 32px 0 32px;
+    font-size: 20px;
+    line-height: 24px;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0.55) 35.96%,
+      rgba(0, 0, 0, 0) 101.42%
+    );
+    z-index: -1;
+  }
+}
