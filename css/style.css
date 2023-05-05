@@ -530,6 +530,9 @@ legend {
   color: #abe921;
 }
 
+.project {
+  margin-top: 64px;
+}
 .project__block-title {
   font-size: 28px;
   font-weight: 400;
@@ -568,6 +571,19 @@ legend {
   justify-content: space-between;
   flex-wrap: wrap;
   gap: 36px 24px;
+}
+.project__block-footer {
+  display: block;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 22px;
+  text-align: center;
+  color: #000000;
+  margin-top: 36px;
+  text-decoration: underline;
+}
+.project__block-footer:hover {
+  transition: all 0.4s ease-in-out;
 }
 .project .crim {
   background: url("../img/crim.png") no-repeat center;
