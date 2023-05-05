@@ -421,3 +421,63 @@
     color: $green;
   }
 }
+
+.project {
+  &__block-title {
+    font-size: 28px;
+    font-weight: 400;
+    line-height: 34px;
+    color: $black;
+  }
+  &__block-links {
+    margin-top: 16px;
+  }
+  &__block-link {
+    margin-right: 24px;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 22px;
+    color: rgba(0, 0, 0, 0.4);
+  }
+  .active {
+    color: $green;
+  }
+  &__block-cart {
+    padding: 0 0 24px 24px;
+    width: 357px;
+    height: 400px;
+    display: flex;
+    align-items: flex-end;
+  }
+  &__block-subtitle {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 29px;
+    color: $white;
+  }
+  &__block-wrapp {
+    margin-top: 36px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 36px 24px;
+  }
+  .crim {
+    background: url("../img/crim.png") no-repeat center;
+  }
+  .magadan {
+    background: url("../img/magadan.png") no-repeat center;
+  }
+  .anger {
+    background: url("../img/anger.png") no-repeat center;
+  }
+  .kazahstan {
+    background: url("../img/kazahstan.png") no-repeat center;
+  }
+  .pavlotti {
+    background: url("../img/pavlotti.png") no-repeat center;
+  }
+  .angertwo {
+    background: url("../img/anger5.png") no-repeat center;
+  }
+}

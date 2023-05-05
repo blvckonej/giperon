@@ -529,3 +529,61 @@ legend {
 .employees .namecolor {
   color: #abe921;
 }
+
+.project__block-title {
+  font-size: 28px;
+  font-weight: 400;
+  line-height: 34px;
+  color: #000000;
+}
+.project__block-links {
+  margin-top: 16px;
+}
+.project__block-link {
+  margin-right: 24px;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 22px;
+  color: rgba(0, 0, 0, 0.4);
+}
+.project .active {
+  color: #abe921;
+}
+.project__block-cart {
+  padding: 0 0 24px 24px;
+  width: 357px;
+  height: 400px;
+  display: flex;
+  align-items: flex-end;
+}
+.project__block-subtitle {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 29px;
+  color: #ffffff;
+}
+.project__block-wrapp {
+  margin-top: 36px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 36px 24px;
+}
+.project .crim {
+  background: url("../img/crim.png") no-repeat center;
+}
+.project .magadan {
+  background: url("../img/magadan.png") no-repeat center;
+}
+.project .anger {
+  background: url("../img/anger.png") no-repeat center;
+}
+.project .kazahstan {
+  background: url("../img/kazahstan.png") no-repeat center;
+}
+.project .pavlotti {
+  background: url("../img/pavlotti.png") no-repeat center;
+}
+.project .angertwo {
+  background: url("../img/anger5.png") no-repeat center;
+}
