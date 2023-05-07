@@ -243,7 +243,16 @@
   &__block-wrap {
     display: flex;
     flex-wrap: wrap;
+    perspective: 3000px;
     gap: 24px;
+  }
+  &__block-flip {
+    position: relative;
+    transform-style: preserve-3d;
+    transition: 0.9s;
+    &:hover {
+      transform: rotateX(180deg);
+    }
   }
   &__block-title {
     font-size: 28px;
@@ -253,13 +262,14 @@
     margin-bottom: 24px;
   }
   &__block-product {
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    position: relative;
     width: 357px;
     height: 461px;
     padding: 0 0 26px 24px;
+    overflow: hidden;
     &::after {
       content: "";
       position: absolute;
@@ -274,6 +284,32 @@
       );
       z-index: 1;
     }
+  }
+  &__block-backproduct {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 357px;
+    height: 461px;
+    padding: 24px;
+    background-color: rgba(197, 255, 46, 0.5);
+    a,
+    p {
+      color: $black;
+    }
+  }
+  .front {
+    transform: rotateX(0);
+    top: 0;
+    left: 0;
+    z-index: 2;
+    backface-visibility: hidden;
+  }
+  .back {
+    top: 0;
+    left: 0;
+    position: absolute;
+    transform: rotateX(180deg);
   }
   &__block-subtitle {
     width: 309px;
@@ -301,39 +337,39 @@
   }
   .build {
     background: url("../img/build.png") no-repeat center;
-    background-size: 100%;
+    background-size: cover;
   }
   .system {
     background: url("../img/system.png") no-repeat center;
-    background-size: 100%;
+    background-size: cover;
   }
   .fire {
     background: url("../img/fire.png") no-repeat center;
-    background-size: 100%;
+    background-size: cover;
   }
   .projects {
     background: url("../img/project.png") no-repeat center;
-    background-size: 100%;
+    background-size: cover;
   }
   .park {
     background: url("../img/park.png") no-repeat center;
-    background-size: 100%;
+    background-size: cover;
   }
   .plan {
     background: url("../img/plan.png") no-repeat center;
-    background-size: 100%;
+    background-size: cover;
   }
   .electron {
     background: url("../img/electron.png") no-repeat center;
-    background-size: 100%;
+    background-size: cover;
   }
   .road {
     background: url("../img/road.png") no-repeat center;
-    background-size: 100%;
+    background-size: cover;
   }
   .architect {
     background: url("../img/architect.png") no-repeat center;
-    background-size: 100%;
+    background-size: cover;
   }
   .light {
     background: url("../img/light.png") no-repeat center;
@@ -341,11 +377,11 @@
   }
   .install {
     background: url("../img/install.png") no-repeat center;
-    background-size: 100%;
+    background-size: cover;
   }
   .construction {
     background: url("../img/construction.png") no-repeat center;
-    background-size: 100%;
+    background-size: cover;
   }
 }
 
@@ -500,7 +536,7 @@
   margin-top: 130px;
   height: 289px;
   background: url("../img/map.png") no-repeat center;
-  background-size: 100%;
+  background-size: cover;
   &__block {
     display: flex;
     justify-content: space-between;
@@ -682,5 +718,15 @@
     font-weight: 500;
     line-height: 20px;
     color: $black;
+  }
+}
+
+@keyframes rotate {
+  0%,
+  100% {
+    transform: rotateX(45deg);
+  }
+  50% {
+    transform: rotateX(0.1deg);
   }
 }

@@ -358,7 +358,16 @@ legend {
 .services__block-wrap {
   display: flex;
   flex-wrap: wrap;
+  perspective: 3000px;
   gap: 24px;
+}
+.services__block-flip {
+  position: relative;
+  transform-style: preserve-3d;
+  transition: 0.9s;
+}
+.services__block-flip:hover {
+  transform: rotateX(180deg);
 }
 .services__block-title {
   font-size: 28px;
@@ -368,13 +377,14 @@ legend {
   margin-bottom: 24px;
 }
 .services__block-product {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  position: relative;
   width: 357px;
   height: 461px;
   padding: 0 0 26px 24px;
+  overflow: hidden;
 }
 .services__block-product::after {
   content: "";
@@ -385,6 +395,33 @@ legend {
   bottom: 0;
   background: linear-gradient(180deg, rgba(0, 0, 0, 0) 26.39%, rgba(0, 0, 0, 0.4) 89.01%);
   z-index: 1;
+}
+.services__block-backproduct {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 357px;
+  height: 461px;
+  padding: 24px;
+  background-color: rgba(197, 255, 46, 0.5);
+}
+.services__block-backproduct a,
+.services__block-backproduct p {
+  color: #000000;
+}
+.services .front {
+  transform: rotateX(0);
+  top: 0;
+  left: 0;
+  z-index: 2;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+}
+.services .back {
+  top: 0;
+  left: 0;
+  position: absolute;
+  transform: rotateX(180deg);
 }
 .services__block-subtitle {
   width: 309px;
@@ -412,39 +449,39 @@ legend {
 }
 .services .build {
   background: url("../img/build.png") no-repeat center;
-  background-size: 100%;
+  background-size: cover;
 }
 .services .system {
   background: url("../img/system.png") no-repeat center;
-  background-size: 100%;
+  background-size: cover;
 }
 .services .fire {
   background: url("../img/fire.png") no-repeat center;
-  background-size: 100%;
+  background-size: cover;
 }
 .services .projects {
   background: url("../img/project.png") no-repeat center;
-  background-size: 100%;
+  background-size: cover;
 }
 .services .park {
   background: url("../img/park.png") no-repeat center;
-  background-size: 100%;
+  background-size: cover;
 }
 .services .plan {
   background: url("../img/plan.png") no-repeat center;
-  background-size: 100%;
+  background-size: cover;
 }
 .services .electron {
   background: url("../img/electron.png") no-repeat center;
-  background-size: 100%;
+  background-size: cover;
 }
 .services .road {
   background: url("../img/road.png") no-repeat center;
-  background-size: 100%;
+  background-size: cover;
 }
 .services .architect {
   background: url("../img/architect.png") no-repeat center;
-  background-size: 100%;
+  background-size: cover;
 }
 .services .light {
   background: url("../img/light.png") no-repeat center;
@@ -452,11 +489,11 @@ legend {
 }
 .services .install {
   background: url("../img/install.png") no-repeat center;
-  background-size: 100%;
+  background-size: cover;
 }
 .services .construction {
   background: url("../img/construction.png") no-repeat center;
-  background-size: 100%;
+  background-size: cover;
 }
 
 .employees__block-title {
@@ -608,7 +645,7 @@ legend {
   margin-top: 130px;
   height: 289px;
   background: url("../img/map.png") no-repeat center;
-  background-size: 100%;
+  background-size: cover;
 }
 .contact__block {
   display: flex;
@@ -791,4 +828,13 @@ legend {
   font-weight: 500;
   line-height: 20px;
   color: #000000;
+}
+
+@keyframes rotate {
+  0%, 100% {
+    transform: rotateX(45deg);
+  }
+  50% {
+    transform: rotateX(0.1deg);
+  }
 }
