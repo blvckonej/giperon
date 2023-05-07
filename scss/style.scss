@@ -297,6 +297,10 @@
     p {
       color: $black;
     }
+    a {
+      height: 100%;
+      bottom: 0;
+    }
   }
   .front {
     transform: rotateX(0);
@@ -355,7 +359,7 @@
         rgba(197, 255, 46, 0.85),
         rgba(197, 255, 46, 0.85)
       ),
-      url("../img/build.png");
+      url("../img/system.png");
   }
   .fire {
     background: url("../img/fire.png") no-repeat center;
@@ -366,7 +370,7 @@
         rgba(197, 255, 46, 0.85),
         rgba(197, 255, 46, 0.85)
       ),
-      url("../img/build.png");
+      url("../img/fire.png");
   }
   .projects {
     background: url("../img/project.png") no-repeat center;
@@ -377,7 +381,7 @@
         rgba(197, 255, 46, 0.85),
         rgba(197, 255, 46, 0.85)
       ),
-      url("../img/build.png");
+      url("../img/project.png");
   }
   .park {
     background: url("../img/park.png") no-repeat center;
@@ -388,35 +392,84 @@
         rgba(197, 255, 46, 0.85),
         rgba(197, 255, 46, 0.85)
       ),
-      url("../img/build.png");
+      url("../img/park.png");
   }
   .plan {
     background: url("../img/plan.png") no-repeat center;
     background-size: cover;
   }
+  .backplan {
+    background-image: linear-gradient(
+        rgba(197, 255, 46, 0.85),
+        rgba(197, 255, 46, 0.85)
+      ),
+      url("../img/plan.png");
+  }
   .electron {
     background: url("../img/electron.png") no-repeat center;
     background-size: cover;
+  }
+  .backelectron {
+    background-image: linear-gradient(
+        rgba(197, 255, 46, 0.85),
+        rgba(197, 255, 46, 0.85)
+      ),
+      url("../img/electron.png");
   }
   .road {
     background: url("../img/road.png") no-repeat center;
     background-size: cover;
   }
+  .backroad {
+    background-image: linear-gradient(
+        rgba(197, 255, 46, 0.85),
+        rgba(197, 255, 46, 0.85)
+      ),
+      url("../img/road.png");
+  }
   .architect {
     background: url("../img/architect.png") no-repeat center;
     background-size: cover;
+  }
+  .backarchitect {
+    background-image: linear-gradient(
+        rgba(197, 255, 46, 0.85),
+        rgba(197, 255, 46, 0.85)
+      ),
+      url("../img/architect.png");
   }
   .light {
     background: url("../img/light.png") no-repeat center;
     background-size: cover;
   }
+  .backlight {
+    background-image: linear-gradient(
+        rgba(197, 255, 46, 0.85),
+        rgba(197, 255, 46, 0.85)
+      ),
+      url("../img/light.png");
+  }
   .install {
     background: url("../img/install.png") no-repeat center;
     background-size: cover;
   }
+  .backinstall {
+    background-image: linear-gradient(
+        rgba(197, 255, 46, 0.85),
+        rgba(197, 255, 46, 0.85)
+      ),
+      url("../img/install.png");
+  }
   .construction {
     background: url("../img/construction.png") no-repeat center;
     background-size: cover;
+  }
+  .backconstruction {
+    background-image: linear-gradient(
+        rgba(197, 255, 46, 0.85),
+        rgba(197, 255, 46, 0.85)
+      ),
+      url("../img/construction.png");
   }
 }
 
@@ -756,12 +809,116 @@
   }
 }
 
-@keyframes rotate {
-  0%,
-  100% {
-    transform: rotateX(45deg);
+.linked__wrap {
+  margin-top: 24px;
+  margin-bottom: 24px;
+  &-links {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 267px;
   }
-  50% {
-    transform: rotateX(0.1deg);
+  &-link {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+    color: rgba(0, 0, 0, 0.6);
+    text-decoration: none;
   }
+  &-border {
+    width: 20px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.6);
+    display: inline-block;
+  }
+  .active {
+    color: #98c12e;
+  }
+}
+
+.catalog__card {
+  &-wrapp {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+  }
+  &-container {
+    padding: 16px;
+  }
+  &-block {
+    width: 357px;
+    height: 645px;
+    box-shadow: 0px 6px 60px rgba(0, 0, 0, 0.13);
+  }
+
+  &-img {
+    width: 100%;
+    height: 270px;
+  }
+  &-title {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 24px;
+    color: $black;
+  }
+  &-border {
+    margin-top: 8px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+  }
+  &-descr {
+    margin-top: 16px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+    color: rgba(0, 0, 0, 0.6);
+  }
+}
+
+.fullbuild {
+  background: url("../img/fullbuild.png") no-repeat center;
+  background-size: cover;
+}
+
+.fullsystem {
+  background: url("../img/fullsystem.png") no-repeat center;
+  background-size: cover;
+}
+.fullfire {
+  background: url("../img/fullfire.png") no-repeat center;
+  background-size: cover;
+}
+.fullprojects {
+  background: url("../img/fullproject.png") no-repeat center;
+  background-size: cover;
+}
+.fullelectron {
+  background: url("../img/fullelectron.png") no-repeat center;
+  background-size: cover;
+}
+.fullpark {
+  background: url("../img/fullpark.png") no-repeat center;
+  background-size: cover;
+}
+.fullplan {
+  background: url("../img/fullplan.png") no-repeat center;
+  background-size: cover;
+}
+.fullroad {
+  background: url("../img/fullroad.png") no-repeat center;
+  background-size: cover;
+}
+.fullarchitect {
+  background: url("../img/fullarchitect.png") no-repeat center;
+  background-size: cover;
+}
+.fulllight {
+  background: url("../img/fulllight.png") no-repeat center;
+  background-size: cover;
+}
+.fullinstall {
+  background: url("../img/fullinstall.png") no-repeat center;
+  background-size: cover;
+}
+.fullconstruction {
+  background: url("../img/fullconstruction.png") no-repeat center;
+  background-size: cover;
 }
