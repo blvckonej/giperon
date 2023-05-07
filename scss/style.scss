@@ -249,7 +249,7 @@
   &__block-flip {
     position: relative;
     transform-style: preserve-3d;
-    transition: 0.9s;
+    transition: all 0.5s ease-in;
     &:hover {
       transform: rotateX(180deg);
     }
@@ -339,21 +339,56 @@
     background: url("../img/build.png") no-repeat center;
     background-size: cover;
   }
+  .backbuild {
+    background-image: linear-gradient(
+        rgba(197, 255, 46, 0.85),
+        rgba(197, 255, 46, 0.85)
+      ),
+      url("../img/build.png");
+  }
   .system {
     background: url("../img/system.png") no-repeat center;
     background-size: cover;
+  }
+  .backsystem {
+    background-image: linear-gradient(
+        rgba(197, 255, 46, 0.85),
+        rgba(197, 255, 46, 0.85)
+      ),
+      url("../img/build.png");
   }
   .fire {
     background: url("../img/fire.png") no-repeat center;
     background-size: cover;
   }
+  .backfire {
+    background-image: linear-gradient(
+        rgba(197, 255, 46, 0.85),
+        rgba(197, 255, 46, 0.85)
+      ),
+      url("../img/build.png");
+  }
   .projects {
     background: url("../img/project.png") no-repeat center;
     background-size: cover;
   }
+  .backprojects {
+    background-image: linear-gradient(
+        rgba(197, 255, 46, 0.85),
+        rgba(197, 255, 46, 0.85)
+      ),
+      url("../img/build.png");
+  }
   .park {
     background: url("../img/park.png") no-repeat center;
     background-size: cover;
+  }
+  .backpark {
+    background-image: linear-gradient(
+        rgba(197, 255, 46, 0.85),
+        rgba(197, 255, 46, 0.85)
+      ),
+      url("../img/build.png");
   }
   .plan {
     background: url("../img/plan.png") no-repeat center;

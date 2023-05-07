@@ -364,7 +364,7 @@ legend {
 .services__block-flip {
   position: relative;
   transform-style: preserve-3d;
-  transition: 0.9s;
+  transition: all 0.5s ease-in;
 }
 .services__block-flip:hover {
   transform: rotateX(180deg);
@@ -451,21 +451,36 @@ legend {
   background: url("../img/build.png") no-repeat center;
   background-size: cover;
 }
+.services .backbuild {
+  background-image: linear-gradient(rgba(197, 255, 46, 0.85), rgba(197, 255, 46, 0.85)), url("../img/build.png");
+}
 .services .system {
   background: url("../img/system.png") no-repeat center;
   background-size: cover;
+}
+.services .backsystem {
+  background-image: linear-gradient(rgba(197, 255, 46, 0.85), rgba(197, 255, 46, 0.85)), url("../img/build.png");
 }
 .services .fire {
   background: url("../img/fire.png") no-repeat center;
   background-size: cover;
 }
+.services .backfire {
+  background-image: linear-gradient(rgba(197, 255, 46, 0.85), rgba(197, 255, 46, 0.85)), url("../img/build.png");
+}
 .services .projects {
   background: url("../img/project.png") no-repeat center;
   background-size: cover;
 }
+.services .backprojects {
+  background-image: linear-gradient(rgba(197, 255, 46, 0.85), rgba(197, 255, 46, 0.85)), url("../img/build.png");
+}
 .services .park {
   background: url("../img/park.png") no-repeat center;
   background-size: cover;
+}
+.services .backpark {
+  background-image: linear-gradient(rgba(197, 255, 46, 0.85), rgba(197, 255, 46, 0.85)), url("../img/build.png");
 }
 .services .plan {
   background: url("../img/plan.png") no-repeat center;
