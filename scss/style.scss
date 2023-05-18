@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
 @import "./reset.scss";
 @import "./colors.scss";
+@import "./slider";
 * {
   padding: 0;
   margin: 0;
@@ -815,10 +816,10 @@
   &-links {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    width: 267px;
+    width: 900px;
   }
   &-link {
+    margin-right: 16px;
     font-size: 16px;
     font-weight: 400;
     line-height: 20px;
@@ -826,6 +827,7 @@
     text-decoration: none;
   }
   &-border {
+    margin-right: 16px;
     width: 20px;
     border-bottom: 1px solid rgba(0, 0, 0, 0.6);
     display: inline-block;
